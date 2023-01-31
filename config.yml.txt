@@ -2,11 +2,11 @@
 # BOT INFORMATION
 # You must not leave them as blank!
 # ===========================================================================
-Token: "BOT_TOKEN" # If you don't know how to get it, Look at our docs: https://docs.plexdevelopment.net
-LicenseKey: "" # Directleaks
-BotName: "Plex Tickets"
-GuildID: "SERVER_ID" # This is your server's ID, Right click on your server icon and copy ID
-OwnerID: "OWNER_ID" # Your discord user ID, Right click on your username and copy ID
+Token: "MTAyNDA5Nzg4OTc1ODIzMjY4OA.Gkj-8p.K5rctHHYPsnADTKT28sUDLMLpXNP1VWlU6O1xI" # If you don't know how to get it, Look at our docs: https://docs.plexdevelopment.net
+LicenseKey: "Directleaks" # Directleaks
+BotName: "Serverhost.games"
+GuildID: "1024046452961443841" # This is your server's ID, Right click on your server icon and copy ID
+OwnerID: "1022962158574764064" # Your discord user ID, Right click on your username and copy ID
 Prefix: "t!"
 EmbedColors: "#f77b38" # Hex color!
 SlashCommands: true # Enable slash commands?
@@ -40,15 +40,15 @@ TicketPanelSettings: # Use the panel command to send the ticket panel to a chann
   EmbedColor: "" # Hex embed color, If this is blank it will use the default embed color you specified
 
 TicketSettings:
-  LogsChannelID: "CHANNEL_ID" # Default channel for all logs
-  CloseConfirmation: false # Confirm before closing a ticket?
+  LogsChannelID: "1066127605520138391" # Default channel for all logs
+  CloseConfirmation: true # Confirm before closing a ticket?
   BlacklistedRoles: [""] # Users with these roles can't open tickets, You can add multiple
   MentionAuthor: false # Mention ticket creator in new tickets?
-  MaxTickets: 1 # The max amount of tickets a user can have open at 1 time
-  DeleteTime: 5 # Amount of time before a ticket gets deleted in seconds (after close/delete button has been pressed)
+  MaxTickets: 2 # The max amount of tickets a user can have open at 1 time
+  DeleteTime: 10 # Amount of time before a ticket gets deleted in seconds (after close/delete button has been pressed)
   RestrictTicketClose: false # Only allow users with support roles to close tickets?
   TicketCooldown: 0 # Add a cooldown for creating new tickets to prevent spam/abuse? (Time in seconds, set to 0 to disable)
-  SelectMenu: false # Use a dropdown menu for creating tickets instead of buttons?
+  SelectMenu: true # Use a dropdown menu for creating tickets instead of buttons?
   DeleteCommandTranscript: true # Should the delete command save ticket transcripts?
   ChannelTopic: "Creator: {user-tag} | Category: {category}" # The channel topic for all tickets, Variables: {username}, {user-tag}, {category}
   TicketCloseReason: true # Require a reason for closing tickets?
@@ -138,66 +138,65 @@ TicketOpenEmbed:
 
 # Button 1
 TicketButton1: # You can't disable the first button!
-  TicketName: "Example 1" # This will be the button and ticket name/category
-  Description: "" # Category description, This only works if SelectMenu is enabled, Leave blank to disable
-  TicketCategoryID: "CATEGORY_ID" # Channel Category ID
+  TicketName: "🚧 General Support" # This will be the button and ticket name/category
+  Description: "Click Here For General Support" # Category description, This only works if SelectMenu is enabled, Leave blank to disable
+  TicketCategoryID: "1024067727293436004" # Channel Category ID
   ClosedCategoryID: "" # The category the ticket will be moved to when it gets closed, leave blank to use the current category (only works if ArchiveTickets is enabled)
   TicketMessageTitle: "Support Ticket ({category})" # Use {category} to get the category name for the ticket opened
   TicketMessage: "> Thank you for contacting support.\n> Please describe your issue and await a response." # Use {user} to get the user that created the ticket
-  ButtonEmoji: "" # Leave blank for no emoji
+  ButtonEmoji: "✉️ " # Leave blank for no emoji
   ButtonColor: "Green" # Blurple, Gray, Green, Red
-  SupportRoles: ["ROLE_ID"] # Users with these roles can view tickets in this category, You can add multiple roles
-  MentionSupportRoles: false # Mention all the Support Roles in new tickets?
+  SupportRoles: ["1024073777828593835","1024073439339884625"] # Users with these roles can view tickets in this category, You can add multiple roles
+  MentionSupportRoles: True # Mention all the Support Roles in new tickets?
   ChannelName: "ticket-{username}" # Variables: {total-tickets}, {username}, {user-tag}, {user-id}
 
 # Button 2
 TicketButton2:
   Enabled: true # Enable 2nd category?
-  TicketName: "Example 2" # This will be the button and ticket name/category
-  Description: "" # Category description, This only works if SelectMenu is enabled, Leave blank to disable
-  TicketCategoryID: "CATEGORY_ID" # Channel Category ID
+  TicketName: "💵 Billing Support" # This will be the button and ticket name/category
+  Description: "Click Here For Billing Issues " # Category description, This only works if SelectMenu is enabled, Leave blank to disable
+ TicketCategoryID: "1024067727293436004" # Channel Category ID
   ClosedCategoryID: "" # The category the ticket will be moved to when it gets closed, leave blank to use the current category (only works if ArchiveTickets is enabled)
   TicketMessageTitle: "Support Ticket ({category})" # Use {category} to get the category name for the ticket opened
   TicketMessage: "> Thank you for contacting support.\n> Please describe your issue and await a response." # Use {user} to get the user that created the ticket
-  ButtonEmoji: "" # Leave blank for no emoji
-  ButtonColor: "Red" # Blurple, Gray, Green, Red
-  SupportRoles: ["ROLE_ID"] # Users with these roles can view tickets in this category, You can add multiple roles
-  MentionSupportRoles: false # Mention all the Support Roles in new tickets?
+  ButtonEmoji: "✉️ " # Leave blank for no emoji
+  ButtonColor: "Green" # Blurple, Gray, Green, Red
+  SupportRoles: ["1024073777828593835","1024073439339884625"] # Users with these roles can view tickets in this category, You can add multiple roles
+  MentionSupportRoles: True # Mention all the Support Roles in new tickets?
   ChannelName: "ticket-{username}" # Variables: {total-tickets}, {username}, {user-tag}, {user-id}
 
 # Button 3
 TicketButton3:
   Enabled: true # Enable 3rd category?
-  TicketName: "Example 3" # This will be the button and ticket name/category
-  Description: "" # Category description, This only works if SelectMenu is enabled, Leave blank to disable
-  TicketCategoryID: "CATEGORY_ID" # Channel Category ID
+  TicketName: "💻 Service Support" # This will be the button and ticket name/category
+  Description: "Click here If You need assistance with any game server" # Category description, This only works if SelectMenu is enabled, Leave blank to disable
+ TicketCategoryID: "1024067727293436004" # Channel Category ID
   ClosedCategoryID: "" # The category the ticket will be moved to when it gets closed, leave blank to use the current category (only works if ArchiveTickets is enabled)
   TicketMessageTitle: "Support Ticket ({category})" # Use {category} to get the category name for the ticket opened
   TicketMessage: "> Thank you for contacting support.\n> Please describe your issue and await a response." # Use {user} to get the user that created the ticket
-  ButtonEmoji: "" # Leave blank for no emoji
-  ButtonColor: "Gray" # Blurple, Gray, Green, Red
-  SupportRoles: ["ROLE_ID"] # Users with these roles can view tickets in this category, You can add multiple roles
-  MentionSupportRoles: false # Mention all the Support Roles in new tickets?
+  ButtonEmoji: "✉️ " # Leave blank for no emoji
+  ButtonColor: "Green" # Blurple, Gray, Green, Red
+  SupportRoles: ["1024073777828593835","1024073439339884625"] # Users with these roles can view tickets in this category, You can add multiple roles
+  MentionSupportRoles: True # Mention all the Support Roles in new tickets?
   ChannelName: "ticket-{username}" # Variables: {total-tickets}, {username}, {user-tag}, {user-id}
-
 # Button 4
 TicketButton4:
   Enabled: true # Enable 4th category?
-  TicketName: "Example 4" # This will be the button and ticket name/category
-  Description: "" # Category description, This only works if SelectMenu is enabled, Leave blank to disable
-  TicketCategoryID: "CATEGORY_ID" # Channel Category ID
+  TicketName: "Partner Interest" # This will be the button and ticket name/category
+  Description: "Click Here If You Are Interested In Partnering" # Category description, This only works if SelectMenu is enabled, Leave blank to disable
+TicketCategoryID: "1024067727293436004" # Channel Category ID
   ClosedCategoryID: "" # The category the ticket will be moved to when it gets closed, leave blank to use the current category (only works if ArchiveTickets is enabled)
   TicketMessageTitle: "Support Ticket ({category})" # Use {category} to get the category name for the ticket opened
   TicketMessage: "> Thank you for contacting support.\n> Please describe your issue and await a response." # Use {user} to get the user that created the ticket
-  ButtonEmoji: "" # Leave blank for no emoji
-  ButtonColor: "Gray" # Blurple, Gray, Green, Red
-  SupportRoles: ["ROLE_ID"] # Users with these roles can view tickets in this category, You can add multiple roles
-  MentionSupportRoles: false # Mention all the Support Roles in new tickets?
+  ButtonEmoji: "✉️ " # Leave blank for no emoji
+  ButtonColor: "Green" # Blurple, Gray, Green, Red
+  SupportRoles: ["1024073777828593835","1024073439339884625"] # Users with these roles can view tickets in this category, You can add multiple roles
+  MentionSupportRoles: True # Mention all the Support Roles in new tickets?
   ChannelName: "ticket-{username}" # Variables: {total-tickets}, {username}, {user-tag}, {user-id}
 
 # Button 5
 TicketButton5:
-  Enabled: true # Enable 5th category?
+  Enabled: false # Enable 5th category?
   TicketName: "Example 5" # This will be the button and ticket name/category
   Description: "" # Category description, This only works if SelectMenu is enabled, Leave blank to disable
   TicketCategoryID: "CATEGORY_ID" # Channel Category ID
@@ -272,13 +271,13 @@ TicketUserCloseDM:
 TicketReviewSettings:
   Enabled: true # Enable ticket review system? (This sends a message to the user when their ticket closes with the option to rate it 1-5 stars)
   AskWhyModal: false # Ask users to explain why they are giving their review?
-  ReviewChannelID: "CHANNEL_ID" # The channel all reviews should be sent to, Only works if AskWhyModal is set to true, leave blank for none
+  ReviewChannelID: "1060667432894746744" # The channel all reviews should be sent to, Only works if AskWhyModal is set to true, leave blank for none
   CloseEmbedReviewMsg: "> Your ticket has been closed in **{guildName}**\n> We would like to know how satisfied you are with our support by rating it with **1-5** stars below" # Use {guildName} for your server's name
   ReviewMsg: "Thank you for leaving a review!"
 
 TicketReviewRequirements:
   Enabled: true # Enable requirements to review a ticket to prevent abuse/spam?
-  TotalMessages: 5 # The amount of messages that has to be in the ticket for the user to be able to review it
+  TotalMessages: 3 # The amount of messages that has to be in the ticket for the user to be able to review it
 
 # ===========================================================================
 # PAYPAL INVOICES
@@ -297,9 +296,9 @@ PayPalSettings:
 # STRIPE INVOICES
 # ===========================================================================
 StripeSettings:
-  Enabled: false # Enable stripe invoices command?
-  StripeSecretKey: "SECRET_KEY"
-  AllowedRoles: ["ROLE_ID"] # Users with these roles can use the paypal command, You can add multiple roles
+  Enabled: true # Enable stripe invoices command?
+  StripeSecretKey: "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"
+  AllowedRoles: ["1045400165948858538","1052330384068710541","1045393969615478824"] # Users with these roles can use the paypal command, You can add multiple roles
   Currency: "USD"
   CurrencySymbol: "$"
   OnlyInTicketChannels: false # Only allow this command in ticket channels?
@@ -329,12 +328,12 @@ CryptoAddresses:
 # SUGGESTION SYSTEM
 # ===========================================================================
 SuggestionSettings:
-  Enabled: false # Enable suggestion system?
-  ChannelID: "CHANNEL_ID" # The channel where all the suggestions will be posted
+  Enabled: true # Enable suggestion system?
+  ChannelID: "1024083701925167134" # The channel where all the suggestions will be posted
   EnableAcceptDenySystem: true # Enable the accept and deny system for suggestions? (if this is disabled, the accept, deny buttons and status will automatically be removed)
   RemoveAllButtonsIfAcceptedOrDenied: true # Remove all buttons from a suggestion if it was accepted or denied?
-  AllowedRoles: ["ROLE_ID"] # Users with these roles can accept and deny suggestions, You can add multiple roles
-  LogsChannel: "CHANNEL_ID" # The channel where all upvote/downvote/accept/deny user logs will be sent to, Leave blank to disable
+  AllowedRoles: ["1045400165948858538","1052330384068710541","1045393969615478824"] # Users with these roles can accept and deny suggestions, You can add multiple roles
+  LogsChannel: "1066127605520138391" # The channel where all upvote/downvote/accept/deny user logs will be sent to, Leave blank to disable
 
 SuggestionStatuses:
   Pending: "🟠 Pending"
@@ -379,20 +378,8 @@ OnlyInTickets: false # Should you only be able to use the commands in tickets?
 CommandsPrefix: "t!" # The prefix for custom commands
 
 CustomCommands: # You can add unlimited commands!
-  - command: "test1"
-    response: "This is a test!"
-    Embed: false # Use an embed instead of a normal message?
-    deleteMsg: true # Delete the message author's message when using this command? (It's recommended to leave this false if replyToUser is set to true)
-    replyToUser: false # Reply to the user with the response that sent the command?
-
-  - command: "test2"
-    response: "This is a test!"
-    Embed: false # Use an embed instead of a normal message?
-    deleteMsg: true # Delete the message author's message when using this command? (It's recommended to leave this false if replyToUser is set to true)
-    replyToUser: false # Reply to the user with the response that sent the command?
-
-  - command: "test3"
-    response: "This is a test!"
+  - command: "keymasterip"
+    response: "The Ip For Keymaster is 24.53.135.169"
     Embed: false # Use an embed instead of a normal message?
     deleteMsg: true # Delete the message author's message when using this command? (It's recommended to leave this false if replyToUser is set to true)
     replyToUser: false # Reply to the user with the response that sent the command?
